@@ -140,7 +140,7 @@
 import TrialsChart from '../components/trialsChart'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
-import fs from 'fs'
+import axios from 'axios'
 
 export default {
   components: { TrialsChart, Icon },
@@ -218,12 +218,11 @@ export default {
         this.state.name = this.states[this.state.index]
       }
       if (this.state.name === 'RESULTS') {
-        fs.writeFile('results.json', JSON.stringify(
-          {
-            manufacturingResults: this.manufacturingResults,
-            workers: this.workers,
-            feedback: this.feedback
-          }))
+        axios.post('/results', {
+          manufacturingResults: this.manufacturingResults,
+          workers: this.workers,
+          feedback: this.feedback
+        })
       }
     },
 

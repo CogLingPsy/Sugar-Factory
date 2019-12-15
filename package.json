@@ -6,6 +6,8 @@
   "cordovaId": "org.cordova.quasar.app",
   "private": true,
   "scripts": {
+    "dev": "quasar dev",
+    "mockserver": "json-server --watch --port 4000 ./src/mockserver/db.json",
     "lint": "eslint --ext .js,.vue src",
     "test": "echo \"No test specified\" && exit 0"
   },
@@ -31,6 +33,7 @@
     "eslint-plugin-promise": "3.4.0",
     "eslint-plugin-standard": "3.0.1",
     "eslint-plugin-vue": "4.0.0",
+    "json-server": "^0.15.1",
     "quasar-cli": "^0.15.6"
   },
   "engines": {
