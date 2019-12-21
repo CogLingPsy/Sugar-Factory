@@ -11,6 +11,7 @@ export default [
     path: '/results',
     component: () => import('layouts/default'),
     children: [
+      { path: ':id', component: () => import('pages/Result') },
       { path: '', component: () => import('pages/ResultsList') }
     ]
   },
