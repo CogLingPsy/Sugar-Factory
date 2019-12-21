@@ -160,7 +160,7 @@ export default {
         index: 0
       },
       currentDay: 1,
-      maxDay: 30,
+      maxDay: 3,
 
       workersToday: 1000,
       workersYesterday: 'неизвестное количество',
@@ -221,7 +221,8 @@ export default {
         axios.post('/results', {
           manufacturingResults: this.manufacturingResults,
           workers: this.workers,
-          feedback: this.feedback
+          feedback: this.feedback,
+          date: new Date()
         })
       }
     },
