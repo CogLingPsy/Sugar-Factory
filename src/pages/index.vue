@@ -1,5 +1,4 @@
 <template>
-
   <q-page class="flex row flex-center ">
     <div class="col-lg-4 col-md-6 col-xs-12 q-pa-sm ">
       <transition
@@ -120,21 +119,15 @@
           <q-card-main>
             <p>Вчера {{ workersYesterday }} человек произвели {{ manufacturedYesterday }} тонн сахара </p>
             <div class="relative-position" style="color: #027be3;" v-ripple>
-              <trials-chart :chart-data="getData" :options="chartOptions"></trials-chart>
+              <trials-chart :manufacturing-results="manufacturingResults"></trials-chart>
             </div>
           </q-card-main>
         </q-card>
-
       </div>
     </transition>
-
   </q-page>
 
 </template>
-
-<style>
-
-</style>
 
 <script>
 import TrialsChart from '../components/trialsChart'
@@ -160,7 +153,7 @@ export default {
         index: 0
       },
       currentDay: 1,
-      maxDay: 3,
+      maxDay: 5,
 
       workersToday: 1000,
       workersYesterday: 'неизвестное количество',
@@ -168,24 +161,7 @@ export default {
 
       manufacturingResults: [],
       workers: [],
-      feedback: '',
-
-      chartOptions: {
-        responsive: true,
-        maintainAspectRatio: true,
-        events: ['click'],
-        scales: {
-          yAxes: [
-            {
-              display: true,
-              ticks: {
-                suggestedMin: 1000,
-                suggestedMax: 12000
-              }
-            }
-          ]
-        }
-      }
+      feedback: ''
     }
   },
 
@@ -230,23 +206,6 @@ export default {
     getRandomInt (min, max) {
       const random = Math.floor(Math.random() * (max - min)) + min
       return random
-    }
-  },
-
-  computed: {
-    getData () {
-      return {
-        labels: this.manufacturingResults.map((el, index) => `${index + 1}`),
-        datasets: [
-          {
-            label: 'Произведено сахара, тонн',
-            data: this.manufacturingResults,
-            fill: false,
-            backgroundColor: '#027be3',
-            borderColor: '#027be3'
-          }
-        ]
-      }
     }
   }
 }
