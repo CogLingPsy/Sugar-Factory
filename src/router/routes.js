@@ -13,10 +13,14 @@ export default [
     children: [
       {
         path: ':id',
-        name: 'results',
+        name: 'result',
         component: () => import('pages/Result')
       },
-      { path: '', component: () => import('pages/ResultsList') }
+      {
+        path: '',
+        name: 'results',
+        component: () => import('pages/ResultsList')
+      }
     ]
   },
   {

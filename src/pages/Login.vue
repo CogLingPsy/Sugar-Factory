@@ -9,7 +9,7 @@
         type="password"
       ></q-input>
       <q-btn @click="login" class="full-width q-mt-md" color="primary"
-      >Login
+      >Войти
       </q-btn>
     </div>
   </q-page>
@@ -17,6 +17,7 @@
 
 <script>
 import axios from 'axios'
+import {setLoggedIn} from '../utils/auth'
 
 export default {
   name: 'Login',
@@ -36,6 +37,7 @@ export default {
       })
       const loginSuccessful = res.data.length > 0
       if (loginSuccessful) {
+        setLoggedIn(true)
         await this.$router.push('results')
       } else {
         this.$q.notify({
