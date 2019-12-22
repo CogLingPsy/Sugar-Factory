@@ -1,19 +1,18 @@
 <template>
   <q-page class="flex row flex-center ">
     <div class="col-lg-4 col-md-6 col-xs-12 q-pa-sm ">
-      <transition
-        enter-active-class="animated bounceInDown"
-        leave-active-class="animated bounceOutUp"
-        v-on:after-leave="nextState"
-      >
         <q-card key="instr" class="q-mb-md" v-if="state.name === 'INSTRUCTION'">
           <q-card-title>
-           <icon name="bullseye"></icon> Задание
+           <icon name="bullseye"></icon>
+            Задание
           </q-card-title>
           <q-card-separator />
           <q-card-main>
-            Вы управляете сахарной фабрикой. Изменяйте количество рабочих так, чтобы объем производства удерживался на уровне 9000 тонн в день. Количество рабочих можно настроить регулятором в разделе управления фабрикой. После выбора количества нажмите на кнопку завершения дня.  После выбора количества нажмите на кнопку завершения дня. Фабрика производит не меньше 1000 и не больше 12000 тонн сахара в день.
-
+            Вы управляете сахарной фабрикой.
+            Изменяйте количество рабочих так, чтобы объем производства удерживался на уровне 9000 тонн в день.
+            Количество рабочих можно настроить регулятором в разделе управления фабрикой.
+            После выбора количества нажмите на кнопку завершения дня.
+            Фабрика производит не меньше 1000 и не больше 12000 тонн сахара в день.
           </q-card-main>
 
           <q-card-actions>
@@ -21,12 +20,6 @@
           </q-card-actions>
 
         </q-card>
-      </transition>
-
-      <transition
-        enter-active-class="animated bounceInDown"
-        leave-active-class="animated bounceOutUp"
-      >
         <q-card key="exp" class="q-mb-md" v-if="state.name === 'EXPERIMENT'">
           <q-card-title>
             <icon name="bullseye"></icon> Задание
@@ -36,16 +29,12 @@
             Вы управляете сахарной фабрикой.
             Изменяйте количество рабочих так, чтобы объем производства удерживался на уровне 9000 тонн в день.
             Количество рабочих можно настроить регулятором в разделе управления фабрикой.
-            После выбора количества нажмите на кнопку завершения дня. Фабрика производит не меньше 1000 и не больше 12000 тонн сахара в день.
+            После выбора количества нажмите на кнопку завершения дня.
+            Фабрика производит не меньше 1000 и не больше 12000 тонн сахара в день.
           </q-card-main>
 
         </q-card>
-      </transition>
 
-      <transition appear enter-active-class="animated pulse"
-      leave-active-class="animated bounceOutLeft"
-      v-on:after-leave="nextState"
-      >
         <q-card v-if="state.name === 'EXPERIMENT'">
           <q-card-title>
             <icon name="building"></icon> Управление фабрикой
@@ -66,11 +55,7 @@
             <q-btn flat color="primary" label="Завершить день" @click="getManufactured" />
           </q-card-actions>
         </q-card>
-      </transition>
 
-      <transition enter-active-class="animated bounceInDown"
-      leave-active-class="animated bounceOutUp"
-      v-on:after-leave="nextState">
         <q-card key="instr" class="q-mb-md" v-if="state.name === 'FEEDBACK'">
           <q-card-title>
             Результаты
@@ -91,10 +76,7 @@
             <q-btn flat color="primary" label="Сохранить" @click="nextState" />
           </q-card-actions>
         </q-card>
-      </transition>
 
-      <transition enter-active-class="animated bounceInDown"
-      >
         <q-card key="instr" class="q-mb-md" v-if="state.name === 'RESULTS'">
           <q-card-title>
             Результаты
@@ -104,12 +86,8 @@
             Спасибо за участие. Ваши результаты сохранены в файле results.json в папке с программой
           </q-card-main>
         </q-card>
-      </transition>
 
     </div>
-    <transition appear
-      enter-active-class="animated pulse"
-      leave-active-class="animated bounceOutRight">
       <div class="col-lg-4 col-md-6 col-xs-12 q-pa-sm" v-if="state.name === 'EXPERIMENT'">
         <q-card>
           <q-card-title>
@@ -124,7 +102,6 @@
           </q-card-main>
         </q-card>
       </div>
-    </transition>
   </q-page>
 
 </template>
@@ -142,11 +119,8 @@ export default {
     return {
       states: [
         'INSTRUCTION',
-        'INSTRUCTION_ANIMATION_LEFT',
         'EXPERIMENT',
-        'EXPERIMENT_ANIMATION_LEFT',
         'FEEDBACK',
-        'FEEDBACK_ANIMATION_LEFT',
         'RESULTS'],
       state: {
         name: 'INSTRUCTION',
