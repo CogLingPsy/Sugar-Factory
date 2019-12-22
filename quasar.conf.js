@@ -58,7 +58,7 @@ module.exports = function (ctx) {
         'QProgress',
         'QInput',
         'QChip',
-
+        `QTable`,
         'QLayout',
         'QLayoutHeader',
         'QLayoutDrawer',
