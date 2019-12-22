@@ -1,3 +1,44 @@
 {
-  "results": []
+  "results": [
+    {
+      "manufacturingResults": [
+        1000,
+        1000,
+        1000
+      ],
+      "workers": [
+        1000,
+        1000,
+        1000
+      ],
+      "feedback": "kk",
+      "date": "2019-12-21T19:49:45.002Z",
+      "id": 2
+    },
+    {
+      "manufacturingResults": [
+        6000,
+        11000,
+        1000,
+        9000,
+        5000
+      ],
+      "workers": [
+        6000,
+        9000,
+        3000,
+        5000,
+        7000
+      ],
+      "feedback": "",
+      "date": "2019-12-22T01:25:54.765Z",
+      "id": 3
+    }
+  ],
+  "login": [
+    {
+      "user": "admin",
+      "password": "admin"
+    }
+  ]
 }

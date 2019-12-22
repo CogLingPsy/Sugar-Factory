@@ -42,7 +42,8 @@ module.exports = function (ctx) {
       // port: 8080,
       open: true, // opens browser window automatically
       proxy: {
-        '/results': 'http://localhost:4000'
+        '/results': 'http://localhost:4000',
+        '/login': 'http://localhost:4000'
       }
     },
     // framework: 'all' --- includes everything; for dev only!
