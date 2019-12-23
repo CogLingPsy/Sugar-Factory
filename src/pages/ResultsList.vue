@@ -9,11 +9,17 @@
           v-bind:key="result.id"
           :to="result.id.toString()"
           :append="true"
+          multiline
         >
           <q-item-main>
-            <q-item-tile label>Испытуемый {{result.id}} <span>{{(new Date(result.date)).toDateString()}}</span></q-item-tile>
-            <q-item-tile sublabel>{{result.feedback}}</q-item-tile>
+            <q-item-tile label>Испытуемый {{result.id}}</q-item-tile>
+            <q-item-tile sublabel lines="1">
+              {{result.feedback}}
+            </q-item-tile>
           </q-item-main>
+          <q-item-side right>
+            <q-item-tile stamp>{{(new Date(result.date)).toDateString()}}</q-item-tile>
+          </q-item-side>
         </q-item>
 
       </q-list>
