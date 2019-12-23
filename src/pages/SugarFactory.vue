@@ -127,7 +127,7 @@ export default {
         index: 0
       },
       currentDay: 1,
-      maxDay: 5,
+      maxDay: 30,
 
       workersToday: 1000,
       workersYesterday: 'неизвестное количество',
