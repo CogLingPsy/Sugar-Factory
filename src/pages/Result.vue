@@ -7,8 +7,20 @@
         </q-card-title>
         <q-card-separator />
         <q-card-main>
-          <q-input :value="(new Date(this.date)).toDateString()" stack-label="Дата прохождения" readonly hide-underline/>
-          <q-input :value="feedback" stack-label="Стратегия" readonly hide-underline/>
+          <q-input
+            :value="(new Date(this.date)).toDateString()"
+            stack-label="Дата прохождения"
+            readonly
+            hide-underline
+            type="text"
+          />
+          <q-input
+            :value="feedback"
+            stack-label="Стратегия"
+            readonly
+            hide-underline
+            type="textarea"
+          />
         </q-card-main>
       </q-card>
 
