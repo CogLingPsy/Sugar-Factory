@@ -30,14 +30,14 @@ export default {
       {
         name: 'manufactured',
         required: true,
-        label: 'Manufactured',
+        label: 'Произведено',
         align: 'right',
         field: 'manufactured'
       },
       {
         name: 'workers',
         required: true,
-        label: 'Workers',
+        label: 'Работников',
         align: 'right',
         field: 'workers'
       }
