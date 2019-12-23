@@ -2,10 +2,12 @@
   <q-page class="flex flex-center">
     <div class="col-md-12 col-lg-2">
       <p>Для просмотра результатов войдите в учетную запись администратора</p>
-      <q-input v-model="username" label="Username"></q-input>
+      <q-input
+        v-model="username"
+        float-label="Имя пользователя"></q-input>
       <q-input
         v-model="password"
-        label="Password"
+        float-label="Пароль"
         type="password"
       ></q-input>
       <q-btn @click="login" class="full-width q-mt-md" color="primary"
