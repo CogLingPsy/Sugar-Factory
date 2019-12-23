@@ -42,7 +42,7 @@ export default {
     },
     async logout () {
       setLoggedIn(false)
-      await this.$router.push('login')
+      await this.$router.push({name: 'modeSelection'})
     }
   },
   async mounted () {

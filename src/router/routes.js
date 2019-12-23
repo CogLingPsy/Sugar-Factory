@@ -4,7 +4,22 @@ export default [
     path: '/',
     component: () => import('../layouts/default'),
     children: [
-      { path: '', component: () => import('../pages/SugarFactory') }
+      {
+        path: '',
+        name: 'modeSelection',
+        component: () => import('../pages/ModeSelection')
+      }
+    ]
+  },
+  {
+    path: '/sugar-factory',
+    component: () => import('../layouts/default'),
+    children: [
+      {
+        path: '',
+        name: 'sugarFactory',
+        component: () => import('../pages/SugarFactory')
+      }
     ]
   },
   {

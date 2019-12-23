@@ -79,11 +79,11 @@
 
         <q-card key="instr" class="q-mb-md" v-if="state.name === 'RESULTS'">
           <q-card-title>
-            Результаты
+            Результат сохранен
           </q-card-title>
           <q-card-separator />
           <q-card-main>
-            Спасибо за участие. Ваши результаты сохранены в файле results.json в папке с программой
+            Спасибо за участие. Научное сообщество вас не забудет!
           </q-card-main>
         </q-card>
 

@@ -38,7 +38,7 @@ export default {
       const loginSuccessful = res.data.length > 0
       if (loginSuccessful) {
         setLoggedIn(true)
-        await this.$router.push('results')
+        await this.$router.push({name: 'results'})
       } else {
         this.$q.notify({
           color: 'negative',
