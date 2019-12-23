@@ -1,7 +1,7 @@
 <template>
-  <q-page class="flex row flex-center ">
-    <div class="col-lg-4 col-md-6 col-xs-12 q-pa-sm ">
-        <q-card key="instr" class="q-mb-md" v-if="state.name === 'INSTRUCTION'">
+  <q-page class="flex row justify-center gutter-md q-pt-lg">
+    <div class="col-lg-4 col-md-6 col-xs-12">
+        <q-card key="instr" class="q-mb-lg" v-if="state.name === 'INSTRUCTION'">
           <q-card-title>
            <icon name="bullseye"></icon>
             Задание
@@ -20,7 +20,7 @@
           </q-card-actions>
 
         </q-card>
-        <q-card key="exp" class="q-mb-md" v-if="state.name === 'EXPERIMENT'">
+        <q-card key="exp" class="q-mb-lg" v-if="state.name === 'EXPERIMENT'">
           <q-card-title>
             <icon name="bullseye"></icon> Задание
           </q-card-title>
@@ -56,7 +56,7 @@
           </q-card-actions>
         </q-card>
 
-        <q-card key="instr" class="q-mb-md" v-if="state.name === 'FEEDBACK'">
+        <q-card key="instr" class="q-mb-lg" v-if="state.name === 'FEEDBACK'">
           <q-card-title>
             Результаты
           </q-card-title>

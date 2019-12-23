@@ -1,7 +1,7 @@
 <template>
-  <q-page class="flex row justify-center gutter-lg q-pt-xl">
+  <q-page class="flex row justify-center gutter-md q-pt-lg">
     <div class="col-md-12 col-lg-4">
-      <q-card class="q-mb-xl">
+      <q-card class="q-mb-lg">
         <q-card-title>
           Испытуемый {{$route.params.id}}
         </q-card-title>
